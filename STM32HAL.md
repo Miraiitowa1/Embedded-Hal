@@ -112,8 +112,6 @@
 
 
 
-
-
 ## 20.1 FreeRTOS
 ### 20.2 任务管理task
 #### 任务创建与启动 osThreadld
