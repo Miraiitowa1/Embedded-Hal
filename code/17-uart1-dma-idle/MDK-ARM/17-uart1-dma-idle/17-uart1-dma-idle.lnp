@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"17-uart1-dma-idle\startup_stm32f103xb.o"
+"17-uart1-dma-idle\main.o"
+"17-uart1-dma-idle\gpio.o"
+"17-uart1-dma-idle\dma.o"
+"17-uart1-dma-idle\usart.o"
+"17-uart1-dma-idle\stm32f1xx_it.o"
+"17-uart1-dma-idle\stm32f1xx_hal_msp.o"
+"17-uart1-dma-idle\stm32f1xx_hal_gpio_ex.o"
+"17-uart1-dma-idle\stm32f1xx_hal_uart.o"
+"17-uart1-dma-idle\stm32f1xx_hal.o"
+"17-uart1-dma-idle\stm32f1xx_hal_rcc.o"
+"17-uart1-dma-idle\stm32f1xx_hal_rcc_ex.o"
+"17-uart1-dma-idle\stm32f1xx_hal_gpio.o"
+"17-uart1-dma-idle\stm32f1xx_hal_dma.o"
+"17-uart1-dma-idle\stm32f1xx_hal_cortex.o"
+"17-uart1-dma-idle\stm32f1xx_hal_pwr.o"
+"17-uart1-dma-idle\stm32f1xx_hal_flash.o"
+"17-uart1-dma-idle\stm32f1xx_hal_flash_ex.o"
+"17-uart1-dma-idle\stm32f1xx_hal_exti.o"
+"17-uart1-dma-idle\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "17-uart1-dma-idle\17-uart1-dma-idle.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "17-uart1-dma-idle.map" -o 17-uart1-dma-idle\17-uart1-dma-idle.axf

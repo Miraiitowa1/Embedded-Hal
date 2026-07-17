@@ -1,0 +1,12 @@
+41-freertos-binsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+41-freertos-binsem\list.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+41-freertos-binsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+41-freertos-binsem\list.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+41-freertos-binsem\list.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+41-freertos-binsem\list.o: ../Core/Inc/FreeRTOSConfig.h
+41-freertos-binsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+41-freertos-binsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+41-freertos-binsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+41-freertos-binsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+41-freertos-binsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+41-freertos-binsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

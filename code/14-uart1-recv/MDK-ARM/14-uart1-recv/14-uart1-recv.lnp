@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"14-uart1-recv\startup_stm32f103xb.o"
+"14-uart1-recv\main.o"
+"14-uart1-recv\gpio.o"
+"14-uart1-recv\usart.o"
+"14-uart1-recv\stm32f1xx_it.o"
+"14-uart1-recv\stm32f1xx_hal_msp.o"
+"14-uart1-recv\stm32f1xx_hal_gpio_ex.o"
+"14-uart1-recv\stm32f1xx_hal_uart.o"
+"14-uart1-recv\stm32f1xx_hal.o"
+"14-uart1-recv\stm32f1xx_hal_rcc.o"
+"14-uart1-recv\stm32f1xx_hal_rcc_ex.o"
+"14-uart1-recv\stm32f1xx_hal_gpio.o"
+"14-uart1-recv\stm32f1xx_hal_dma.o"
+"14-uart1-recv\stm32f1xx_hal_cortex.o"
+"14-uart1-recv\stm32f1xx_hal_pwr.o"
+"14-uart1-recv\stm32f1xx_hal_flash.o"
+"14-uart1-recv\stm32f1xx_hal_flash_ex.o"
+"14-uart1-recv\stm32f1xx_hal_exti.o"
+"14-uart1-recv\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "14-uart1-recv\14-uart1-recv.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "14-uart1-recv.map" -o 14-uart1-recv\14-uart1-recv.axf

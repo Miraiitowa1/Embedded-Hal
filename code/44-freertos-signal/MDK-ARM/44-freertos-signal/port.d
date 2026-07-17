@@ -1,0 +1,12 @@
+44-freertos-signal\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
+44-freertos-signal\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+44-freertos-signal\port.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+44-freertos-signal\port.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+44-freertos-signal\port.o: ../Core/Inc/FreeRTOSConfig.h
+44-freertos-signal\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+44-freertos-signal\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+44-freertos-signal\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+44-freertos-signal\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+44-freertos-signal\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+44-freertos-signal\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+44-freertos-signal\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

@@ -1,0 +1,15 @@
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+38-freertos-task\queue.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+38-freertos-task\queue.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+38-freertos-task\queue.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+38-freertos-task\queue.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+38-freertos-task\queue.o: ../Core/Inc/FreeRTOSConfig.h
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+38-freertos-task\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

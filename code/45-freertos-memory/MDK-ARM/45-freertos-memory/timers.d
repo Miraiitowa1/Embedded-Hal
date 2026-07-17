@@ -1,0 +1,15 @@
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/timers.c
+45-freertos-memory\timers.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+45-freertos-memory\timers.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+45-freertos-memory\timers.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+45-freertos-memory\timers.o: ../Core/Inc/FreeRTOSConfig.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+45-freertos-memory\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h

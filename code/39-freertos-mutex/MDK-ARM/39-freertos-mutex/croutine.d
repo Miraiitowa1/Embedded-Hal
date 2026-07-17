@@ -1,0 +1,14 @@
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+39-freertos-mutex\croutine.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+39-freertos-mutex\croutine.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+39-freertos-mutex\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+39-freertos-mutex\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

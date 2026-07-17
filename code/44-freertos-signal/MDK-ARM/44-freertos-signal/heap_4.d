@@ -1,0 +1,13 @@
+44-freertos-signal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+44-freertos-signal\heap_4.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+44-freertos-signal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+44-freertos-signal\heap_4.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+44-freertos-signal\heap_4.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+44-freertos-signal\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+44-freertos-signal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+44-freertos-signal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+44-freertos-signal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+44-freertos-signal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+44-freertos-signal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+44-freertos-signal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+44-freertos-signal\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
