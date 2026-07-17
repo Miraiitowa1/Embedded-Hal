@@ -6,3 +6,4 @@ modbus\port.o: E:\Keil\ARM\ARMCC\Bin\..\include\inttypes.h
 modbus\port.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 modbus\port.o: ..\FreeModbus\mbport.h
 modbus\port.o: ..\FreeModbus\mbproto.h
+modbus\port.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h

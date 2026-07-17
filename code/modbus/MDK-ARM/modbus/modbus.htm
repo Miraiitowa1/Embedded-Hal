@@ -3,7 +3,7 @@
 <title>Static Call Graph - [modbus\modbus.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image modbus\modbus.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Fri Jul 17 22:33:05 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Fri Jul 17 23:10:23 2026
 <BR><P>
 <H3>Maximum Stack Usage =        192 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1069,6 +1069,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Modbus_Init
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRegHoldingCB
 </UL>
 
 <P><STRONG><a name="[ee]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
@@ -1144,7 +1145,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> mb.o(.data)
 </UL>
 <P><STRONG><a name="[4a]"></a>eMBFuncReadHoldingRegister</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, mbfuncholding.o(i.eMBFuncReadHoldingRegister))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = eMBFuncReadHoldingRegister &rArr; eMBRegHoldingCB
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = eMBFuncReadHoldingRegister &rArr; eMBRegHoldingCB &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRegHoldingCB
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prveMBError2Exception
@@ -1160,7 +1161,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> mb.o(.data)
 </UL>
 <P><STRONG><a name="[4d]"></a>eMBFuncReadWriteMultipleHoldingRegister</STRONG> (Thumb, 156 bytes, Stack size 24 bytes, mbfuncholding.o(i.eMBFuncReadWriteMultipleHoldingRegister))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = eMBFuncReadWriteMultipleHoldingRegister &rArr; eMBRegHoldingCB
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = eMBFuncReadWriteMultipleHoldingRegister &rArr; eMBRegHoldingCB &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRegHoldingCB
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prveMBError2Exception
@@ -1183,7 +1184,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> mb.o(.data)
 </UL>
 <P><STRONG><a name="[4c]"></a>eMBFuncWriteHoldingRegister</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, mbfuncholding.o(i.eMBFuncWriteHoldingRegister))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = eMBFuncWriteHoldingRegister &rArr; eMBRegHoldingCB
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = eMBFuncWriteHoldingRegister &rArr; eMBRegHoldingCB &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRegHoldingCB
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prveMBError2Exception
@@ -1199,7 +1200,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> mb.o(.data)
 </UL>
 <P><STRONG><a name="[4b]"></a>eMBFuncWriteMultipleHoldingRegister</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, mbfuncholding.o(i.eMBFuncWriteMultipleHoldingRegister))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = eMBFuncWriteMultipleHoldingRegister &rArr; eMBRegHoldingCB
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = eMBFuncWriteMultipleHoldingRegister &rArr; eMBRegHoldingCB &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRegHoldingCB
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prveMBError2Exception
@@ -1279,8 +1280,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBFuncReadDiscreteInputs
 </UL>
 
-<P><STRONG><a name="[cf]"></a>eMBRegHoldingCB</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, port.o(i.eMBRegHoldingCB))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = eMBRegHoldingCB
+<P><STRONG><a name="[cf]"></a>eMBRegHoldingCB</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, port.o(i.eMBRegHoldingCB))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = eMBRegHoldingCB &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBFuncWriteMultipleHoldingRegister
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBFuncWriteHoldingRegister

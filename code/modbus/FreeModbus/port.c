@@ -1,5 +1,6 @@
 #include "mb.h"
 #include "mbport.h"
+#include "stdio.h"
 
 // 十路线圈 可读可写的 位控制
 #define REG_COILS_SIZE 10
@@ -44,6 +45,8 @@ USHORT usRegIndex = usAddress - 1;
 	return MB_ENOERR;
 	
 }
+
+//读写保持寄存器的回调函数
 // CMD6、 3、 16命令处理回调函数
 eMBErrorCode eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegisterMode eMode
 ) 
@@ -57,12 +60,13 @@ eMBErrorCode eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usN
 	if(eMode == MB_REG_WRITE)
 	{
 		while( usNRegs > 0 )
-	{
-	REG_HOLD_BUF[usRegIndex] = (pucRegBuffer[0] << 8) | pucRegBuffer[1];
-	pucRegBuffer += 2;
-	usRegIndex++;
-	usNRegs--;
-	}
+		{
+			REG_HOLD_BUF[usRegIndex] = (pucRegBuffer[0] << 8) | pucRegBuffer[1];
+			pucRegBuffer += 2;
+			usRegIndex++;
+			usNRegs--;
+		}
+		printf("usAddress:%x\n", usAddress);
 	} // 读寄存器
 	else
 	{
