@@ -32,6 +32,7 @@ This software is licensed under terms that can be found in the LICENSE file
 #include "ina226.h"
 #include "mb.h"
 #include "modbus.h"
+#include "port.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -100,6 +101,8 @@ int main(void)
 	OLED_ShowStr(16,0, (unsigned char*)"Modbus Control", 2);
 	AHT20_Init();
 	INA226_Init();
+	HAL_TIM_Base_Start_IT(&htim3);
+	
 	Modbus_Init();
   /* USER CODE END 2 */
 
@@ -111,8 +114,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		eMBPoll();// 轮训查询
+		Modbus_Parse();//解析各种命令
 	} 
-	/* USER CODE END 3 */
+  /* USER CODE END 3 */
 }
 
 /**
@@ -182,7 +186,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
-
+  else if(htim->Instance == TIM3)
+  {
+	printf("tim3\n");
+	TIM3_Timerout_Flag = 1;		//500ms置位1次
+  }
   /* USER CODE END Callback 1 */
 }
 

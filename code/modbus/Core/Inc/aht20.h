@@ -15,6 +15,7 @@
 uint8_t AHT20_Read_Status(void);
 void AHT20_SendAC(void);
 void AHT20_Init(void);
+void AHT20_ReadData(void);
 void AHT20_Read_CTdata(uint32_t *ct);
 void AHT20_Test(void);
 

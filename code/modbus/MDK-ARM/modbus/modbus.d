@@ -1,6 +1,5 @@
 modbus\modbus.o: ..\Core\Src\modbus.c
 modbus\modbus.o: ../Core/Inc/modbus.h
-modbus\modbus.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 modbus\modbus.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 modbus\modbus.o: ../Core/Inc/stm32f1xx_hal_conf.h
 modbus\modbus.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
@@ -32,6 +31,7 @@ modbus\modbus.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 modbus\modbus.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 modbus\modbus.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 modbus\modbus.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+modbus\modbus.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 modbus\modbus.o: ../Core/Inc/i2c.h
 modbus\modbus.o: ../Core/Inc/main.h
 modbus\modbus.o: ../FreeModbus/mb.h
@@ -40,3 +40,5 @@ modbus\modbus.o: E:\Keil\ARM\ARMCC\Bin\..\include\assert.h
 modbus\modbus.o: E:\Keil\ARM\ARMCC\Bin\..\include\inttypes.h
 modbus\modbus.o: ../FreeModbus/mbport.h
 modbus\modbus.o: ../FreeModbus/mbproto.h
+modbus\modbus.o: ../Core/Inc/gpio.h
+modbus\modbus.o: ../Core/Inc/aht20.h

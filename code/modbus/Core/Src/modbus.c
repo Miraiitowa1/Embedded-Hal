@@ -3,8 +3,12 @@
 #include "stm32f1xx_hal.h"
 #include "i2c.h"
 #include "mb.h"
+#include "gpio.h"
+#include "aht20.h"
 
 uint8_t SlaveAddress = 1; //设备默认地址为1
+uint8_t Modify_SlaveAddress_Flag = 0; //修改从机地址的标志位
+uint8_t TIM3_Timerout_Flag = 0; //500ms定时器到，刷新各种传感器
 
 /**
   * @brief  从EEPROM中读取从机地址
@@ -41,4 +45,36 @@ void Modbus_Init(void)
 	printf("SlaveAddress %x\n",SlaveAddress);
 	eMBInit(MB_RTU, SlaveAddress, 0, 115200, MB_PAR_NONE); // 初始化modbus为RTU方式， 波特率115200， 无校验
 	eMBEnable();
+}
+
+void Modbus_Parse(void)
+{
+	if(TIM3_Timerout_Flag)	//50ms执行一次
+	{
+		TIM3_Timerout_Flag = 0;
+		
+		//读取温湿度
+		AHT20_ReadData();
+	}
+	
+	if(Modify_SlaveAddress_Flag)	//修改从机地址
+	{
+		Modify_SlaveAddress_Flag = 0;
+		//printf("SlaveAddress:%d\n", REG_HOLD_BUF[9]);
+		WriteSlaveAddress(0, REG_HOLD_BUF[9]);
+		HAL_Delay(1000);
+		eMBDisable();
+		eMBClose();
+		Modbus_Init();
+	}
+	
+	//解析REG_HOLD_BUF[0]
+	if(REG_HOLD_BUF[0] & LED1_CMD)
+	{
+		LED_Control(LED1, ON);
+	}
+	else
+	{
+		LED_Control(LED1, OFF);
+	}
 }

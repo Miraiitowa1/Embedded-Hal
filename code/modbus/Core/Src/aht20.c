@@ -2,6 +2,7 @@
 #include "aht20.h"
 #include "i2c.h"
 #include "oled.h"
+#include "modbus.h"
 
 float RH;		// 湿度，转换单位后的实际值，标准单位%
 float Temp;		// 温度，转换单位后的实际值，标准单位°C
@@ -89,6 +90,8 @@ void AHT20_ReadData(void)
 	RetuData = RetuData&0xfffff;
 	Temp = RetuData*200.0/1024/1024-50;//计算得到温度值
 
+	REG_HOLD_BUF[1] = Temp;
+	REG_HOLD_BUF[2] = RH;
 }
 
 void AHT20_Test(void)
@@ -98,6 +101,7 @@ void AHT20_Test(void)
 	AHT20_ReadData();
 	printf("RH  =%.1f %%\n",RH);
 	printf("Temp=%.1f C\n",Temp);
+	
 	sprintf((char *)str,"RH  :%.1f %% ",RH);
 	OLED_ShowStr(0,3, (unsigned char*)str, 2);	
 	sprintf((char *)str,"Temp:%.1f C ",Temp);

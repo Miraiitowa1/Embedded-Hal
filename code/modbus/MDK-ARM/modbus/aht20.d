@@ -35,3 +35,4 @@ modbus\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 modbus\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 modbus\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 modbus\aht20.o: ../Core/Inc/oled.h
+modbus\aht20.o: ../Core/Inc/modbus.h

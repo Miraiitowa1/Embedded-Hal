@@ -1,6 +1,7 @@
 #include "mb.h"
 #include "mbport.h"
 #include "stdio.h"
+#include "modbus.h"
 
 // 十路线圈 可读可写的 位控制
 #define REG_COILS_SIZE 10
@@ -14,13 +15,17 @@ uint8_t REG_COILS_BUF[REG_COILS_SIZE] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 1};
 // 十路离散量 只读的位控制
 #define REG_DISC_SIZE 10
 uint8_t REG_DISC_BUF[REG_DISC_SIZE] = {1,1,1,1,0,0,0,0,1,1};
+
 // 只读的线圈
 // 十路保持寄存器 可读可写的2字节寄存器
 #define REG_HOLD_SIZE 10
 uint16_t REG_HOLD_BUF[REG_HOLD_SIZE];
+
 // 十路输入寄存器 只读的2字节寄存器
 #define REG_INPUT_SIZE 10
 uint16_t REG_INPUT_BUF[REG_INPUT_SIZE];
+
+
 // 只读保持寄存器
 /// CMD4命令处理回调函数
 eMBErrorCode eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs )
@@ -66,7 +71,10 @@ eMBErrorCode eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usN
 			usRegIndex++;
 			usNRegs--;
 		}
-		printf("usAddress:%x\n", usAddress);
+		if(usAddress == 10)	//修改从机地址 REG_HOLD_BUF[9]就是新的从机地址
+		{
+			Modify_SlaveAddress_Flag = 1;	//修改从机地址标志位 
+		}
 	} // 读寄存器
 	else
 	{

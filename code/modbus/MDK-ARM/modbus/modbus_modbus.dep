@@ -1,8 +1,8 @@
 Dependencies for Project 'modbus', Target 'modbus': (DO NOT MODIFY !)
-F (startup_stm32f103xb.s)(0x6A5A3C07)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o modbus\startup_stm32f103xb.o --depend modbus\startup_stm32f103xb.d)
-F (..\Core\Src\aht20.c)(0x68C7AC64)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\aht20.o --omf_browse modbus\aht20.crf --depend modbus\aht20.d)
+F (startup_stm32f103xb.s)(0x6A5AF075)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o modbus\startup_stm32f103xb.o --depend modbus\startup_stm32f103xb.d)
+F (..\Core\Src\aht20.c)(0x6A5B4139)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\aht20.o --omf_browse modbus\aht20.crf --depend modbus\aht20.d)
 I (E:\Keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (../Core/Inc/aht20.h)(0x68B7DFE5)
+I (../Core/Inc/aht20.h)(0x6A5B4161)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (../Core/Inc/i2c.h)(0x6A5A38BC)
 I (../Core/Inc/main.h)(0x68BE7425)
@@ -36,6 +36,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x692D4D2F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x692D4D2F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x692D4D2F)
 I (../Core/Inc/oled.h)(0x68B6AD14)
+I (../Core/Inc/modbus.h)(0x6A5B4138)
 F (..\Core\Src\ina226.c)(0x68C7ACC9)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\ina226.o --omf_browse modbus\ina226.crf --depend modbus\ina226.d)
 I (../Core/Inc/ina226.h)(0x66D18BC8)
 I (../Core/Inc/main.h)(0x68BE7425)
@@ -107,9 +108,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x692D4D2F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x692D4D2F)
 I (../Core/Inc/oled.h)(0x68B6AD14)
 I (../Core/Inc/codetab.h)(0x68B6AF9E)
-F (..\Core\Src\modbus.c)(0x6A5A45DD)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\modbus.o --omf_browse modbus\modbus.crf --depend modbus\modbus.d)
-I (../Core/Inc/modbus.h)(0x6A5A3D11)
-I (E:\Keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+F (..\Core\Src\modbus.c)(0x6A5B4138)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\modbus.o --omf_browse modbus\modbus.crf --depend modbus\modbus.d)
+I (../Core/Inc/modbus.h)(0x6A5B4138)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x692D4D2F)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A59D7C2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x692D4D2F)
@@ -140,6 +140,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x692D4D2F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x692D4D2F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x692D4D2F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x692D4D2F)
+I (E:\Keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Core/Inc/i2c.h)(0x6A5A38BC)
 I (../Core/Inc/main.h)(0x68BE7425)
 I (../FreeModbus/mb.h)(0x6A59B119)
@@ -147,8 +148,10 @@ I (../FreeModbus/port.h)(0x6A59B112)
 I (E:\Keil\ARM\ARMCC\include\assert.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (../FreeModbus/mbport.h)(0x6A59B119)
-I (../FreeModbus/mbproto.h)(0x6A59B119)
-F (../Core/Src/main.c)(0x6A5A3D20)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\main.o --omf_browse modbus\main.crf --depend modbus\main.d)
+I (../FreeModbus/mbproto.h)(0x6A5AEA87)
+I (../Core/Inc/gpio.h)(0x68B804AB)
+I (../Core/Inc/aht20.h)(0x6A5B4161)
+F (../Core/Src/main.c)(0x6A5B4138)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\main.o --omf_browse modbus\main.crf --depend modbus\main.d)
 I (../Core/Inc/main.h)(0x68BE7425)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x692D4D2F)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A59D7C2)
@@ -187,15 +190,15 @@ I (../Core/Inc/usart.h)(0x6A59D71A)
 I (../Core/Inc/gpio.h)(0x68B804AB)
 I (E:\Keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Core/Inc/oled.h)(0x68B6AD14)
-I (../Core/Inc/aht20.h)(0x68B7DFE5)
+I (../Core/Inc/aht20.h)(0x6A5B4161)
 I (../Core/Inc/ina226.h)(0x66D18BC8)
 I (../FreeModbus/mb.h)(0x6A59B119)
 I (../FreeModbus/port.h)(0x6A59B112)
 I (E:\Keil\ARM\ARMCC\include\assert.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (../FreeModbus/mbport.h)(0x6A59B119)
-I (../FreeModbus/mbproto.h)(0x6A59B119)
-I (../Core/Inc/modbus.h)(0x6A5A3D11)
+I (../FreeModbus/mbproto.h)(0x6A5AEA87)
+I (../Core/Inc/modbus.h)(0x6A5B4138)
 F (../Core/Src/gpio.c)(0x68C76724)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\gpio.o --omf_browse modbus\gpio.crf --depend modbus\gpio.d)
 I (../Core/Inc/gpio.h)(0x68B804AB)
 I (../Core/Inc/main.h)(0x68BE7425)
@@ -300,7 +303,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x692D4D2F)
 I (E:\Keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\string.h)(0x588B8344)
 I (../Core/Inc/oled.h)(0x68B6AD14)
-F (../Core/Src/tim.c)(0x6A59E14B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\tim.o --omf_browse modbus\tim.crf --depend modbus\tim.d)
+F (../Core/Src/tim.c)(0x6A5AF485)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\tim.o --omf_browse modbus\tim.crf --depend modbus\tim.d)
 I (../Core/Inc/tim.h)(0x6A59DE09)
 I (../Core/Inc/main.h)(0x68BE7425)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x692D4D2F)
@@ -479,7 +482,7 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (..\FreeModbus\mbconfig.h)(0x6A59B119)
 I (..\FreeModbus\mbframe.h)(0x6A59B119)
 I (..\FreeModbus\mbfunc.h)(0x6A59B119)
@@ -494,7 +497,7 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (..\FreeModbus\mbconfig.h)(0x6A59B119)
 I (..\FreeModbus\mbascii.h)(0x6A59B119)
 I (..\FreeModbus\mbframe.h)(0x6A59B119)
@@ -513,7 +516,7 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (..\FreeModbus\mbframe.h)(0x6A59B119)
 I (..\FreeModbus\mbconfig.h)(0x6A59B119)
 F (..\FreeModbus\mbfuncdiag.c)(0x6A59B119)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\mbfuncdiag.o --omf_browse modbus\mbfuncdiag.crf --depend modbus\mbfuncdiag.d)
@@ -526,7 +529,7 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (..\FreeModbus\mbframe.h)(0x6A59B119)
 I (..\FreeModbus\mbconfig.h)(0x6A59B119)
 F (..\FreeModbus\mbfuncholding.c)(0x6A59B119)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\mbfuncholding.o --omf_browse modbus\mbfuncholding.crf --depend modbus\mbfuncholding.d)
@@ -538,7 +541,7 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (..\FreeModbus\mbframe.h)(0x6A59B119)
 I (..\FreeModbus\mbconfig.h)(0x6A59B119)
 F (..\FreeModbus\mbfuncinput.c)(0x6A59B119)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\mbfuncinput.o --omf_browse modbus\mbfuncinput.crf --depend modbus\mbfuncinput.d)
@@ -550,7 +553,7 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (..\FreeModbus\mbframe.h)(0x6A59B119)
 I (..\FreeModbus\mbconfig.h)(0x6A59B119)
 F (..\FreeModbus\mbfuncother.c)(0x6A59B119)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\mbfuncother.o --omf_browse modbus\mbfuncother.crf --depend modbus\mbfuncother.d)
@@ -562,7 +565,7 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (..\FreeModbus\mbframe.h)(0x6A59B119)
 I (..\FreeModbus\mbconfig.h)(0x6A59B119)
 F (..\FreeModbus\mbrtu.c)(0x6A59B119)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\mbrtu.o --omf_browse modbus\mbrtu.crf --depend modbus\mbrtu.d)
@@ -574,7 +577,7 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (..\FreeModbus\mbrtu.h)(0x6A59B119)
 I (..\FreeModbus\mbframe.h)(0x6A59B119)
 I (..\FreeModbus\mbcrc.h)(0x6A59B119)
@@ -587,7 +590,7 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (..\FreeModbus\mbconfig.h)(0x6A59B119)
 I (..\FreeModbus\mbtcp.h)(0x6A59B119)
 I (..\FreeModbus\mbframe.h)(0x6A59B119)
@@ -600,16 +603,46 @@ I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
-F (..\FreeModbus\port.c)(0x6A5A45DD)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\port.o --omf_browse modbus\port.crf --depend modbus\port.d)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
+F (..\FreeModbus\port.c)(0x6A5AD5C4)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\port.o --omf_browse modbus\port.crf --depend modbus\port.d)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\port.h)(0x6A59B112)
 I (E:\Keil\ARM\ARMCC\include\assert.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 I (E:\Keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (../Core/Inc/modbus.h)(0x6A5B4138)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x692D4D2F)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A59D7C2)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x692D4D2F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x692D4D2F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x692D4D2F)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x692D4D24)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x692D4D24)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x692D4D24)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x692D4D24)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x692D4D2F)
+I (E:\Keil\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x692D4D2F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x692D4D2F)
 F (..\FreeModbus\portevent.c)(0x6A59B112)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\portevent.o --omf_browse modbus\portevent.crf --depend modbus\portevent.d)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\port.h)(0x6A59B112)
@@ -617,7 +650,7 @@ I (E:\Keil\ARM\ARMCC\include\assert.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\inttypes.h)(0x588B8344)
 I (E:\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 F (..\FreeModbus\portserial.c)(0x6A59E98A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\portserial.o --omf_browse modbus\portserial.crf --depend modbus\portserial.d)
 I (..\FreeModbus\port.h)(0x6A59B112)
 I (E:\Keil\ARM\ARMCC\include\assert.h)(0x588B8344)
@@ -656,7 +689,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x692D4D2F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x692D4D2F)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 F (..\FreeModbus\porttimer.c)(0x6A59E464)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\porttimer.o --omf_browse modbus\porttimer.crf --depend modbus\porttimer.d)
 I (..\FreeModbus\port.h)(0x6A59B112)
 I (E:\Keil\ARM\ARMCC\include\assert.h)(0x588B8344)
@@ -696,7 +729,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x692D4D2F)
 I (E:\Keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (..\FreeModbus\mb.h)(0x6A59B119)
 I (..\FreeModbus\mbport.h)(0x6A59B119)
-I (..\FreeModbus\mbproto.h)(0x6A59B119)
+I (..\FreeModbus\mbproto.h)(0x6A5AEA87)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x692D4D2F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../FreeModbus-I.\RTE\_modbus-IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o modbus\stm32f1xx_hal_gpio_ex.o --omf_browse modbus\stm32f1xx_hal_gpio_ex.crf --depend modbus\stm32f1xx_hal_gpio_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x692D4D2F)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A59D7C2)
