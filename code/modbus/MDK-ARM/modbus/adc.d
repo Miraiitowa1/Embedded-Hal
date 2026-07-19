@@ -34,3 +34,4 @@ modbus\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 modbus\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 modbus\adc.o: ../Core/Inc/oled.h
 modbus\adc.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+modbus\adc.o: ../Core/Inc/modbus.h

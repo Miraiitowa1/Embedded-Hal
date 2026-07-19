@@ -34,4 +34,5 @@ modbus\ina226.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 modbus\ina226.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 modbus\ina226.o: ../Core/Inc/i2c.h
 modbus\ina226.o: ../Core/Inc/oled.h
+modbus\ina226.o: ../Core/Inc/modbus.h
 modbus\ina226.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h

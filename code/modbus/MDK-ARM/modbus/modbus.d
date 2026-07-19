@@ -42,3 +42,6 @@ modbus\modbus.o: ../FreeModbus/mbport.h
 modbus\modbus.o: ../FreeModbus/mbproto.h
 modbus\modbus.o: ../Core/Inc/gpio.h
 modbus\modbus.o: ../Core/Inc/aht20.h
+modbus\modbus.o: ../Core/Inc/ina226.h
+modbus\modbus.o: ../Core/Inc/oled.h
+modbus\modbus.o: ../Core/Inc/adc.h
