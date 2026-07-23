@@ -37,99 +37,138 @@
 ###### 2.**进程堆栈指针（PSP）** 由常规用户程序使用
 ##### R14（LR）链接寄存器 常用于调用子程序时保存返回地址
 ##### R15（PC）程序计数器 用于存放下一条执行的指令的地址
-##### 特殊功能寄存器组
+#### 特殊功能寄存器组
 ##### 程序状态寄存器组xPSR
-#### 中断屏蔽寄存器组（FAULMASK/PRMASK/BASEPRI
+
+###### 程序状态寄存器在其内部⼜被分为三个⼦状态寄存器：应⽤程序PSR(APSR，Application PSR)、中断号PSR(IPSR，Interrupt PSR)和执⾏PSR(EPSR，ExecutioPSR)  
+
+##### 中断屏蔽寄存器组（FAULMASK/PRMASK/BASEPRI）
 ![alt text](image-12.png)
-#### 控制寄存器 CONTROL 2位寄存器
+##### 控制寄存器 CONTROL 2位寄存器
 ![alt text](image-13.png)
 ---
 
-## 1.3 指令集
-### CISC/RISC Cortex-M3（RISC）
-### 指令格式 操作码字段和操作数字段
-#### Thumb-2指令集 16/32混合指令集
+### 1.3 指令集
+#### CISC/RISC Cortex-M3（RISC）
+#### 指令格式 操作码字段和操作数字段
+##### Thumb-2指令集 16/32混合指令集
 ---
 
-## 1.4 操作模式与特权分级
-### 特权分级
+### 1.4 操作模式与特权分级
+#### 特权分级
 ![alt text](image-14.png)
-### 操作模式
-#### 线程模式。当复位或异常返回时，Cortex-M3 进⼊该模式。通常情况下，线程模式是⽤⼾应⽤程序的运⾏模式。在该模式下,可以执⾏特权级和⽤⼾(⾮特权)级代码
-#### 处理者模式。当发⽣异常时，Cortex-M3 进⼊该模式 通常情况下，Handler 模式是异常或中断服务程序或操作系统内核代码的运⾏模式。在该模式下,所有代码都是特权访问的
-### 模式间的切换
+#### 操作模式
+##### 线程模式。当复位或异常返回时，Cortex-M3 进⼊该模式。通常情况下，线程模式是⽤⼾应⽤程序的运⾏模式。在该模式下,可以执⾏特权级和⽤⼾(⾮特权)级代码
+##### 处理者模式。当发⽣异常时，Cortex-M3 进⼊该模式 通常情况下，Handler 模式是异常或中断服务程序或操作系统内核代码的运⾏模式。在该模式下,所有代码都是特权访问的
+##### 模式间的切换
 ![alt text](image-15.png)
 ---
 
-## 1.5 异常和中断
-###  ARM 中凡是发⽣了打断程序正常执⾏流程的事件，都被称为异常(exception) 中断(interrupt)是⼀种特殊的异常
+### 1.5 异常和中断
+####  ARM 中凡是发⽣了打断程序正常执⾏流程的事件，都被称为异常(exception) 中断(interrupt)是⼀种特殊的异常
 ---
 
-## 1.6 Cortex-M3存储器系统 存储器映射
+### 1.6 Cortex-M3存储器系统 存储器映射
 ![alt text](image-16.png)
 ---
 
-## 1.7 Cortex-M3低功耗模式
-### 睡眠模式
-#### Cortex-M3内核可以通过WFI/WFE指令进入睡眠，停止执行指令，只有NVIC的小部分保持唤醒
-### 深度睡眠模式
-#### Cortex-M3在微控制器的配合驱动下实现深度睡眠模式
+### 1.7 Cortex-M3低功耗模式
+
+#### 睡眠模式
+##### Cortex-M3内核可以通过WFI/WFE指令进入睡眠，停止执行指令，只有NVIC的小部分保持唤醒
+#### 深度睡眠模式
+##### Cortex-M3在微控制器的配合驱动下实现深度睡眠模式
 
 ---
 
-## 2.1 复位与时钟控制
+## 第二章 复位与时钟控制
 ### 复位（RESET）
 #### 将CPU的所有内部寄存器、状态和程序计数器等重置为预定值，以便系统能够从指定的程序入口重新启动
+
+#### **重点**： STM32外部不加复位电路可以⼯作吗
+
+##### 可以不⽤加外部复位电路，芯⽚上电会产⽣⼀个电源复位信号。 加上复位电路⼀般加复位电路(延时启动)是为了: 1.确保电源建⽴， 就是为了多⼀层保险。2.可以⼿动复位。
+
 #### **上电复位（POR）**
 #### **掉电复位**
 #### **复位引脚复位**
 #### **看门狗复位**
 #### **软件复位**
+
 ---
 
-## 2.2 STM32F103启动过程
-### 初始化异常向量表、初始化时钟系统、初始化存储器系统、初始化堆栈、跳转到main函数等
+### 2.1 STM32F103启动过程
+#### 初始化异常向量表、初始化时钟系统、初始化存储器系统、初始化堆栈、跳转到main函数等
 ---
 
-## 2.3 ARM汇报语言
-### [LABEL] OPERATION [OPERAND] [:COMMENT]
+### 2.2 ARM汇报语言
+#### [LABEL] OPERATION [OPERAND] [:COMMENT]
 #### LABEL ：标号。是指令、变量或数据的地址或者常量。此项为可选项，如果有区必须顶格书写，后⾯不能加冒号
+
 #### OPERATION ：指令、宏指令、伪指令或伪操作 此项为必选项，但不能在⼀⾏开头顶格书写，⽽且前后必须有空格。特别注意，在ARM 汇编程序中，⼀条指令伪指令、寄存器名可以全部为⼤写字⺟,也可以全部为⼩写字⺟，但不要⼤⼩写混合使⽤。
 #### OPERAND ：操作的对象(即操作数)。可以是常量、变量，标号、寄存器或表达式。此项为可选项，若有多个操作数,操作数之间⽤逗号隔开。
 #### COMMENT：程序注释，增强代码的可读性。此项为可选项，由分号开始，可以顶格写
 
 #### 指令
-##### **B（）**
-###### B{<code>} Rm/label label或 Rm 是跳转的⽬标地址，跳转范围在 +/- 32MB 之间 例如，“B.”表⽰跳转到当前地址(“.”表⽰当前指令地址)，即进⼊死循环，等价于C语⾔的while(1)
+##### **B（）**B{<code>} Rm/label label或 Rm 是跳转的⽬标地址，跳转范围在 +/- 32MB 之间 例如，“B.”表⽰跳转到当前地址(“.”表⽰当前指令地址)，即进⼊死循环，等价于C语⾔的while(1)
+
 ##### **BX（跳转并切换指令集）**
 ##### **BLX（带返回地址的跳转并切换指令集）**
 
-### 伪指令
+#### 伪指令
 
-### 伪操作
-#### 数据定义伪操作 EQU(常量定义和赋值，与 C语⾔中#define 有异曲同⼯之妙) SPACE(分配⼀⽚连续的存储区域。等价于C语⾔的malloc) DCD(分配⼀⽚连续的字（4字节）存储区域并初始化)
+#### 伪操作
+##### 数据定义伪操作 EQU(常量定义和赋值，与 C语⾔中#define 有异曲同⼯之妙) SPACE(分配⼀⽚连续的存储区域。等价于C语⾔的malloc) DCD(分配⼀⽚连续的字（4字节）存储区域并初始化)
 ---
 
-##  3.1 GPIO
-### GPIO工作模式
-#### #define GPIO_MODE_INPUT 0x00000000u /*!< Input Floating Mode */
-#### #define GPIO_MODE_OUTPUT_PP 0x00000001u /*!< Output Push Pull Mode */
-#### #define GPIO_MODE_OUTPUT_OD 0x00000011u /*!< Output Open Drain Mode */
-#### #define GPIO_MODE_AF_PP 0x00000002u /*!< Alternate Function Push Pull Mode */
-#### #define GPIO_MODE_AF_OD 0x00000012u /*!< Alternate Function Open Drain Mode */
-#### #define GPIO_MODE_AF_INPUT GPIO_MODE_INPUT /*!< Alternate Function Input Mode */
-#### #define GPIO_MODE_ANALOG 0x00000003u /*!< Analog Mode */
+#  第三章 GPIO
+
+### 3.1 GPIO内部结构
+
+![image-20260723190951833](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260723190951833.png)
+
+#### 保护二极管
+
+##### 引脚的两个保护⼆级管可以防⽌引脚外部过⾼或过低的电压输⼊，当引脚电压⾼于VDD 时，上⽅的⼆极管导通，当引脚电压低于 VSS 时，下⽅的⼆极管导通，防⽌不正常电压引⼊芯⽚导致芯⽚烧毁  
+
+#### 上下拉电阻
+
+##### 上拉电阻：当GPIO引脚被设置为输⼊模式时，如果外部设备没有连接到该引脚，那么该引脚会处于悬空状态，即电平状态不确定。此时，如果启⽤上拉电阻，可以将该引脚的电平拉⾼到⾼电平状态，避免了悬空状态的出现。当外部设备连接到该引脚时，上拉电阻不会影响外部设备的状态  
+
+##### 下拉电阻：与上拉电阻类似，当GPIO引脚被设置为输⼊模式时，如果外部设备没有连接到该引脚，该引脚会处于悬空状态。此时，如果启⽤下拉电阻，可以将该引脚的电平拉低到低电平状态，避免了悬空状态的出现。当外部设备连接到该引脚时，下拉电阻不会影响外部设备的状态  
+
+#### P-MOS和N-MOS
+
+##### 推挽输出模式，是根据这两个 MOS 管的⼯作⽅式来命名的。在该结构中输⼊⾼电平时，经过反向后，上⽅的 P-MOS 导通，下⽅的 NMOS 关闭，对外输出⾼电平；⽽在该结构中输⼊低电平时，经过反向后，N-MOS 管导通，P-MOS 关闭，对外输出低电平
+
+##### 开漏输出模式，上⽅的 P-MOS 管完全不⼯作。如果我们控制输出为 0，低电平，则 P-MOS 管关闭，N-MOS 管导通，使输出接地，若控制输出为 1 (它⽆法直接输出⾼电平)时，则 P-MOS 管和 N-MOS 管都关闭，所以引脚既不输出⾼电平，也不输出低电平，为⾼阻态（悬空)
+
+### 3.2 GPIO工作模式
+
+```c
+#define GPIO_MODE_INPUT 0x00000000u /*!< Input Floating Mode */
+#define GPIO_MODE_OUTPUT_PP 0x00000001u /*!< Output Push Pull Mode */
+#define GPIO_MODE_OUTPUT_OD 0x00000011u /*!< Output Open Drain Mode */
+#define GPIO_MODE_AF_PP 0x00000002u /*!< Alternate Function Push Pull Mode */
+#define GPIO_MODE_AF_OD 0x00000012u /*!< Alternate Function Open Drain Mode */
+#define GPIO_MODE_AF_INPUT GPIO_MODE_INPUT /*!< Alternate Function Input Mode */
+#define GPIO_MODE_ANALOG 0x00000003u /*!< Analog Mode */
+```
 
 ---
 
-## 4.1 EXTI外部中断
+## 第四章 EXTI外部中断
 
-## 5.1 
+
+
+
 
 ## 20.1 FreeRTOS
 
 ### 20.2 任务管理task
 #### 任务创建与启动 osThreadld
+
+
 
 ---
 
