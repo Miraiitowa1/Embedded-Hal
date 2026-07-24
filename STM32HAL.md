@@ -175,9 +175,36 @@
 
 #### 事件模式下，当EXTI线路被触发时不会产⽣中断，但是可以通过读取EXTI状态寄存器来检测事件是否发⽣  
 
+---
 
+## 第五章 Timer定时器
 
+### 5.1 SysTick
 
+#### SysTick —系统定时器是属于 CM3 内核中的⼀个外设，内嵌在 NVIC中 系统定时器是⼀个 24bit 的向下递减的计数器，计数器每计数⼀次的时间为 1/SYSCLK，⼀般我们设置系统时钟 SYSCLK 等于 72M。当重装载数值寄存器的值递减到 0 的时候，系统定时器就产⽣⼀次中断，以此循环往复
+
+![image-20260724001942236](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260724001942236.png)
+
+| 寄存器名称 | 寄存器描述       |
+| ---------- | ---------------- |
+| CTRL       | 控制及状态寄存器 |
+| LOAD       | 重装载数值寄存器 |
+| VAL        | 当前数值寄存器   |
+| CALIB      | 校准数值寄存器   |
+
+### 5.2 通用定时器
+
+![image-20260724095332614](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260724095332614.png)
+
+### 5.3 PWM（脉冲宽度调制）
+
+![image-20260724105945905](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260724105945905.png)
+
+#### 工作模式
+
+##### PWM模式1(向上计数) :计数器从0计数加到⾃动重装载值(TIMx_ARR)，然后重新从0开始计数，并且产⽣⼀个计数器溢出事件 
+
+##### PWM模式2(向下计数) :计数器从⾃动重装载值(TIMx_ARR)减到0，然后重新从重装载值(TIMx_ARR)开始递减，并且产⽣⼀个计数器溢出事件
 
 
 
