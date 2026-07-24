@@ -206,6 +206,62 @@
 
 ##### PWM模式2(向下计数) :计数器从⾃动重装载值(TIMx_ARR)减到0，然后重新从重装载值(TIMx_ARR)开始递减，并且产⽣⼀个计数器溢出事件
 
+---
+
+## 第六章 USART 通用同步异步收发器
+
+### 6.1 通⽤同步异步收发器（Universal Synchronous Asynchronous Receiver and Transmitter）是⼀个串⾏通信设备，可以灵活地与外部设备进⾏全双⼯数据交换  
+
+![image-20260724151535998](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260724151535998.png)
+
+### 6.2 按键抖动
+
+#### 通常按键抖动所⽤的开关都是机械弹性开关，当机械触点断开、闭合时，由于机械触点的弹性作⽤，⼀个按键开关在闭合时不会⻢上就稳定的接通，在断开时也不会⼀下⼦彻底断开，⽽是在闭合和断开的瞬间伴随着⼀连串的抖动  
+
+#### 消抖
+
+##### 1. 延时消抖⽅法是通过设置⼀个较短的时间延迟，在此期间忽略其他的按键信号，只接受⾸次触发的按键信号  
+
+##### 2. 状态机消抖⽅法是通过状态的转换来判断按键信号的有效性，只有在按键信号稳定⼀段时间后才被认为是有效的  
+
+##### 3. 滤波电容可以在按键信号输⼊端引⼊⼀个电容，通过电容的充放电过程来平滑信号，减少抖动
+
+##### 4. RC电路是通过在按键信号输⼊端串联⼀个电阻和电容，利⽤RC的充放电时间常数来实现消抖 
+
+```c
+static uint32_t old_uwTick =0;
+if( (uwTick - old_uwTick) < 200 ) return ;
+// uwTick 是全局变量, 每隔1ms 累加一次
+// 第1次进入时 , 时间差会大于200 , if( (uwTick - old_uwTick) < 200 ) 这个条件不成立
+// 第2次进入时 小时200ms时 不满足条件, 会直接返回
+// 等时间差大于200ms时, 可以再次触发中断
+old_uwTick = uwTick ;
+```
+
+###    6.3 USART接收与发送
+
+![image-20260724173731582](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260724173731582.png)
+
+```c
+HAL_UART_Transmit(); // 串口发送数据， 使用超时管理机制
+HAL_UART_Receive(); //串口接收数据， 使用超时管理机制
+HAL_UART_Transmit_IT(); //串口中断模式发送
+HAL_UART_Receive_IT(); //串口中断模式接收
+HAL_UART_Transmit_DMA(); //串口DMA模式发送
+HAL_UART_Transmit_DMA(); //串口DMA模式接收
+HAL_UART_IRQHandler(UART_HandleTypeDef *huart); //串口中断处理函数
+// complete 缩写 cplt
+HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart); //串口发送中断回调函数
+HAL_UART_TxHalfCpltCallback(UART_HandleTypeDef *huart); //串口发送一半中断回调函数（用的较少）
+HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart); //串口接收中断回调函数
+HAL_UART_RxHalfCpltCallback(UART_HandleTypeDef *huart);//串口接收一半回调函数（用的较少）
+HAL_UART_ErrorCallback(); //串口接收错误函数
+```
+
+---
+
+## 第七章 DMA 直接内存访问
+
 
 
 ## 20.1 FreeRTOS
